@@ -3,7 +3,9 @@
         <v-container align="center">
             <v-row align="center" justify="space-between">
                 <p>Join our mission to support organisations by using reviews to power business decisions</p>
-                <button onclick="location.href='/'" type="button">register for free</button>
+                <router-link to="/register">
+                    <button type="button">register for free</button>
+                </router-link>
             </v-row>
         </v-container>
     </v-row>

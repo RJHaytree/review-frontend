@@ -89,7 +89,7 @@
                                 <th>Brand</th>
                             </tr>
                         </thead>
-                        <tbody v-if="sortedItems.length <= 0">
+                        <tbody v-if="sortedItems.length <= 0 && this.brandFilter == '' && this.nameFilter == ''">
                             <tr v-for="item in items" :key="item.id">
                                 <td>{{ item.id }}</td>
                                 <td>{{ item.name }}</td>
@@ -205,6 +205,10 @@ export default {
             let tempItemArray = [];
             let items = this.$store.getters.items;
             // filter by brand if set
+
+            console.log(this.brandFilter);
+            console.log(this.nameFilter)
+
             if (this.brandFilter) {
                 tempItemArray = items.filter(i => i.brand == this.brandFilter)
             }
@@ -217,10 +221,12 @@ export default {
                 let itemsTemp = tempItemArray.filter(i => {
                     return i.name.toLowerCase().indexOf(this.nameFilter.toLowerCase()) > -1;
                 })
+                
+                tempItemArray = itemsTemp;
+            }
 
-                if (itemsTemp.length > 0) {
-                    tempItemArray = itemsTemp;
-                }
+            if (this.brandFilter == '' && this.nameFilter == '') {
+                tempItemArray = items;
             }
 
             this.sortedItems = tempItemArray;
