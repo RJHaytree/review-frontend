@@ -81,7 +81,7 @@ export default {
 .login {
     border-radius: 10px;
     font-family: 'Roboto Condensed', sans-serif;
-    margin-top: 1.5rem;
+    margin-top: 8rem;
     max-width: 600px;
     background-color: #ffffff;
     padding: 4rem;

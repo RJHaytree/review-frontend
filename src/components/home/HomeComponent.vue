@@ -28,6 +28,7 @@ export default {
 
 <style lang="scss" scoped>
 h1#home {
+    padding-top: 60px;
     font-family: 'Roboto Condensed', sans-serif;
     text-align: center;
     max-width: 850px;

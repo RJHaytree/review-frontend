@@ -27,4 +27,8 @@ html, body, .v-main, .v-main__wrap {
   padding: 0;
   margin: 0;
 }
+
+.v-main {
+  padding: 0px 0px 0px !important;
+}
 </style>
