@@ -27,7 +27,7 @@
     "vue-cookies": "^1.8.0",
     "vue-router": "^4.0.3",
     "vue3-clipboard": "^1.0.0",
-    "vuetify": "^3.0.0-alpha.0",
+    "vuetify": "npm:@vuetify/nightly@next",
     "vuex": "^4.0.0",
     "webfontloader": "^1.0.0"
   },
